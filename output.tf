@@ -3,9 +3,9 @@ output "result" {
 }
 
 output "file_name" {
-  value = "Created file name is ${var.file_name} and it is ready to check."
+  value = local_file.random_file.filename
 }
 
 output "file_data" {
-  value = "The file data: ${var.data}"
+  value = local_file.random_file.content
 }
