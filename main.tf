@@ -9,6 +9,6 @@ resource "random_id" "id_random" {
 }
 
 resource "local_file" "random_file" {
-  filename = "${random_string.random}_${random_id.id_random}.txt"
+  filename = "${random_string.random.result}_${random_id.id_random.hex}.txt"
   content  = var.data
 }
