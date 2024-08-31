@@ -1,7 +1,9 @@
 resource "random_string" "random" {
   length           = 8
-  special          = true
-  override_special = "/@£$&%#!*"
+  special          = false
+  upper            = true
+  lower            = false
+  number           = false
 }
 
 resource "random_id" "id_random" {
